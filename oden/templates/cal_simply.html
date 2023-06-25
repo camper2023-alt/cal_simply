@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>簡略ダメージ計算器</h1>
+    <p>計算結果は下の行に出力します。</p>
+    <p>デフォルトでは全ての数値が100の結果を出力しています。</p>
+    <p>{{ damage }}</p>
+
+    <form action="/result" method="post">
+        <label for="article">攻撃</label>
+        <input type="text" name="at" placeholder="100">
+        <p></p>
+        <label for="name">防御</label>
+        <input type="text" name="dif" placeholder="100">
+        <p></p>
+        <label for="name">威力</label>
+        <input type="text" name="po" placeholder="100">
+        <button type="submit" class="btn btn-primary">計算</button>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </form>
+
+{% endblock %}
